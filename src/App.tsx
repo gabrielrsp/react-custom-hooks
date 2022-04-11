@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
+import DebounceComponent from './CustomHooks/useDebounce/DebounceComponent'
 import TimeoutComponent from './CustomHooks/useTimeout/TimeoutComponent'
 import ToggleComponent from './CustomHooks/useToggle/ToggleComponent'
+import UpdateEffectComponent from './CustomHooks/useUpdateEffect/useUpdateEffectComponent'
 
 function App() {
 
@@ -44,14 +46,18 @@ function App() {
 
   return (
     <>
-      {/* <div className="App">
+      <div className="App">
         <h1>ToggleComponent</h1>
         <ToggleComponent/>
         <h1>Timeout Component</h1>
         <TimeoutComponent/>
-      </div> */}
+        <h1>Debounce Component</h1>
+        <DebounceComponent/>
+        <h1>UpdateEffectComponent</h1>
+        <UpdateEffectComponent/>
+      </div>
     
-      <hr />
+      {/* <hr />
       <strong>USE REF STUDIES</strong> <br/>
 
       <input  ref={inputRef}  id="lei" value={name} onChange={(e) => setName(e.target.value)} />
@@ -59,7 +65,7 @@ function App() {
 
       <button onClick={focus}> FOCUS </button>
 
-      <div>I rendered {renderCount.current} times</div>
+      <div>I rendered {renderCount.current} times</div> */}
 
     </>
   )
