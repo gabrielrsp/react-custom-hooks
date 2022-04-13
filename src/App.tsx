@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
+import FunctionContextComponent from './Components/FunctionContextComponent'
+import { ThemeProvider } from './CustomHooks/contextHooks/ThemeContext'
 import DebounceComponent from './CustomHooks/useDebounce/DebounceComponent'
 import TimeoutComponent from './CustomHooks/useTimeout/TimeoutComponent'
 import ToggleComponent from './CustomHooks/useToggle/ToggleComponent'
@@ -42,8 +44,6 @@ function App() {
     // document.querySelector<HTMLInputElement>("#lei")?.focus()
   }
 
-
-
   return (
     <>
       <div className="App">
@@ -56,6 +56,10 @@ function App() {
         <h1>UpdateEffectComponent</h1>
         <UpdateEffectComponent/>
       </div>
+
+      <ThemeProvider>
+        <FunctionContextComponent />
+      </ThemeProvider>
     
       {/* <hr />
       <strong>USE REF STUDIES</strong> <br/>
