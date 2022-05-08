@@ -1,7 +1,7 @@
-export function useState<T extends number | string = number > (){   // se não for definido o tipo da generic ao chamar a função, vai ser passado number por PADRÃO
+export function customUseState<T extends number | string = number > (){   // se não for definido o tipo da generic ao chamar a função, vai ser passado number por PADRÃO
 
   // let state: number | string    //pipe signific UNION que signifa 'Ou'
-  let state: T 
+  let state: T //atribuição do tipo de forma dinâmica através do Generic
 
   function get() {
     return state
@@ -15,17 +15,21 @@ export function useState<T extends number | string = number > (){   // se não f
 
 }
 
-// let newState = useState<boolean>()  // não vai dar certo por que na definição do generic foi criada a CONSTRAINT ( extends number | string) no generic
+/*
+ let newState = customUseState<boolean>()  
+  não vai dar certo por que na definição do generic foi criada a CONSTRAINT ( extends number | string)
+  OU SEJA, a tipagem deve abranger NO MÍNIMO string, ou number.
+*/
 
-// se eu quiser somente number ou string eu devo passar useState<string> ou useState<number>
+// se eu quiser somente number ou somente string eu devo passar customUseState<string> ou customUseState<number>
 
-let newState = useState<string | number >()   //pra passar o tipo do generic eu uso <>logo após o nome da função, se houver constraint, deve satisfazer a constraint!
+let newState = customUseState<any>()   //pra passar o tipo do generic eu uso <>logo após o nome da função, se houver constraint, deve satisfazer a constraint!
 //se nao passar nada (E SE NÃO TIVER UM 'extends' na definição do generic) seria como 'any' então se NÃO PRECISA DE USAR <any> 
 
 newState.get()
 newState.set('2')
 newState.set(2)   // <--- aqui como foi passado o tipo da função via generic (string, linha 19), nao vai ser aceito parametro do tipo number 
-
+newState.set(false)
 
 
 /* O Generic é usado para deixar a tipagem mais flexível

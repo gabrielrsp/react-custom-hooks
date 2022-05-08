@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import FunctionContextComponent from './Components/FunctionContextComponent'
 import { ThemeProvider } from './CustomHooks/contextHooks/ThemeContext'
+import { customUseState } from './CustomHooks/generics'
 import DebounceComponent from './CustomHooks/useDebounce/DebounceComponent'
 import TimeoutComponent from './CustomHooks/useTimeout/TimeoutComponent'
 import ToggleComponent from './CustomHooks/useToggle/ToggleComponent'
@@ -43,6 +44,19 @@ function App() {
     // console.log(document.querySelector("#lei"))
     // document.querySelector<HTMLInputElement>("#lei")?.focus()
   }
+
+////////////////////  STUDIES GENERICS USAGE //////////////////
+  const newState = customUseState<any>()
+
+  newState.set('a')
+  console.log('1° Retorno: ', newState.get())
+  
+  newState.set(1)
+  console.log('2° Retorno: ', newState.get())
+  
+
+  newState.set(false)
+  console.log('3° Retorno: ', newState.get())
 
   return (
     <>
