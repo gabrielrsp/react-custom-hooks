@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import FunctionContextComponent from './Components/FunctionContextComponent'
 import { ThemeProvider } from './CustomHooks/contextHooks/ThemeContext'
-import { customUseState } from './CustomHooks/generics'
+import { customUseState } from './TypeScript/generics'
 import DebounceComponent from './CustomHooks/useDebounce/DebounceComponent'
 import TimeoutComponent from './CustomHooks/useTimeout/TimeoutComponent'
 import ToggleComponent from './CustomHooks/useToggle/ToggleComponent'
