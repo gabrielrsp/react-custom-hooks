@@ -1,13 +1,11 @@
 // INTERFACE
 
-
 type person = {
   id: number;
   name: string;
 }
 
 // note the difference between type and interface!
-
 interface ITeam {
   division: number;
   team: string;

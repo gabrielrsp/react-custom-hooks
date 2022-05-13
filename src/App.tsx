@@ -6,11 +6,17 @@ import DebounceComponent from './CustomHooks/useDebounce/DebounceComponent'
 import TimeoutComponent from './CustomHooks/useTimeout/TimeoutComponent'
 import ToggleComponent from './CustomHooks/useToggle/ToggleComponent'
 import UpdateEffectComponent from './CustomHooks/useUpdateEffect/useUpdateEffectComponent'
+import { testPromiseAll } from './TypeScript/promises'
 
 function App() {
 
   const [name, setName] = useState('initial state')
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    console.log('calling api... ')
+    testPromiseAll() 
+  })
 
  // ----- REFS ------ //   
  /* Refs are usefull for: 
