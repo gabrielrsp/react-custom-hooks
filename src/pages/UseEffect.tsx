@@ -42,8 +42,14 @@ export function UseEffect () {
   /**
    * Como o onChange do input altera o estado, consequentemente 
    * ocorre novamente o fluxo de renderização, e a variável filteredList
-   * obrigatoriamente será atualizada pois está solta dentro do componente 
+   * obrigatoriamente será ATUALIZADA pois está SOLTA dentro do componente
+   *
+   * OBS: Aqui não é preciso criar um outro estado para armazenar os resultados
+   * filtrados, pois eu teria que ATUALIZAR OUTRO ESTADO, OCASIONANDO 
+   * OUTRA RENDERIZAÇÃO (ex: setFilteredList em um useEffect)
+   * o que seria desnecessário
    
+  !-> DIFICILMENTE UTILIZAMOS USE EFFECT PRA ATUALIZAR ESTADO DE FORMA SINCRONA!!!
   * */ 
 
   return (

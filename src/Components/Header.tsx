@@ -8,6 +8,7 @@ export function Header () {
         <Link style={{ color: '#fff' }} to="/"> <h1> HOME </h1></Link>
         <Link style={{ color: '#fff' }} to="/forms"> <h1> FORMS </h1></Link>
         <Link style={{ color: '#fff' }} to="/use-effect"> <h1> USE EFFECT </h1></Link>
+        <Link style={{ color: '#fff' }} to="/closure"> <h1> CLOSURES </h1></Link>
       </div>
     </>
 
