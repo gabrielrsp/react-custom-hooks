@@ -4,6 +4,7 @@ import { Forms } from './pages/Forms';
 import { Home } from './pages/Home';
 import { UseEffect } from './pages/UseEffect'
 import { Closure } from './pages/Closure';
+import { Refs } from './pages/Refs';
 
 export function Router () {
   return (
@@ -13,6 +14,7 @@ export function Router () {
         <Route path='/forms' element={<Forms />} />
         <Route path='/use-effect' element={<UseEffect />} />
         <Route path='/closure' element={<Closure />} />
+        <Route path='/refs' element={<Refs />} />
       </Route>
     </Routes>
 
