@@ -10,7 +10,7 @@ import { customUseState } from "../TypeScript/generics"
 import { testPromiseAll } from "../TypeScript/promises"
 
 
-export function UseEffect () {
+export default function UseEffect ()  {
 
   const [name, setName] = useState('initial state')
   const [list, setList] = useState<string[]>([])

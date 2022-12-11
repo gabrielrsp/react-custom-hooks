@@ -54,7 +54,7 @@ export function Closure () {
     */
 
 
-
+    
   }
 
   return (
@@ -65,4 +65,6 @@ export function Closure () {
       <button onClick={handleAddLike}>Add Like</button>
     </>
   )
-}
+}    
+
+
